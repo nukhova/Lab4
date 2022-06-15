@@ -1,6 +1,6 @@
 #include "Order.h"
 
-void Order::add_position(Position* ptr_pos) {
+void Order::add_position(std::unique_ptr<Position> ptr_pos) {
     size_t t = 1;
     for (const auto & position: m_ptr_positions) {
         if (position->get_ptr_product()->get_info() == ptr_pos->get_ptr_product()->get_info())

@@ -17,4 +17,3 @@ public:
 private:
     Balance m_balance;
 };
-
