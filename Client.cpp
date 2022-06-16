@@ -1,7 +1,7 @@
 #include "Client.h"
 
 bool Balance::waste_money(double money) {
-    if (m_money > money){
+    if (m_money > money && money > 0){
         m_money -= money;
         return true;
     }

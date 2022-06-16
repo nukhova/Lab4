@@ -3,10 +3,11 @@
 void Order::add_position(std::unique_ptr<Position> ptr_pos) {
     size_t t = 1;
     for (const auto & position: m_ptr_positions) {
-        if (position->get_ptr_product()->get_info() == ptr_pos->get_ptr_product()->get_info())
-            t = 0;
+        if (position->get_ptr_product()->get_info() == ptr_pos->get_ptr_product()->get_info()){
+            //std::move(position, ptr_pos);
+        }
     }
-    if (t) m_ptr_positions.push_back(ptr_pos);
+    m_ptr_positions.push_back(ptr_pos);
 }
 
 double Order::get_cost(){

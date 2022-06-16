@@ -3,7 +3,7 @@
 
 class Balance {
 public:
-    void add_money(double money) { m_money += money; }
+    void add_money(double money) { if (money > 0) m_money += money; }
     bool waste_money(double money);
     double get_money() const { return m_money; }
 private:
