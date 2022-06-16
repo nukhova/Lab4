@@ -22,7 +22,7 @@ private:
 class WeightProduct: public Product {
 public:
     WeightProduct(const ProductInfo & product_info, const double cost) : Product(product_info), m_cost_per_kg(cost) {}
-    std::string get_info() const override { return get_info() + " : " + std::to_string(m_cost_per_kg) + " per kg"; }
+    std::string get_info() const override { return m_product_info.get_info() + " : " + std::to_string(m_cost_per_kg) + " per kg"; }
     double get_cost() const override { return m_cost_per_kg; }
 private:
     double m_cost_per_kg;
@@ -31,7 +31,7 @@ private:
 class AmmountProduct: public Product {
 public:
     AmmountProduct(const ProductInfo & product_info, const double cost) : Product(product_info), m_cost_per_one(cost) {}
-    std::string get_info() const override { return get_info() + " : " + std::to_string(m_cost_per_one) + " per one"; }
+    std::string get_info() const override { return m_product_info.get_info() + " : " + std::to_string(m_cost_per_one) + " per one"; }
     double get_cost() const override { return m_cost_per_one; }
 private:
     double m_cost_per_one;
