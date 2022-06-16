@@ -7,8 +7,8 @@ class Client;
 class Order {
 public:
     void add_position(std::unique_ptr<Position> ptr_pos);
-    double get_cost();
-    void get_info();
+    double get_cost() const;
+    void get_info() const;
     bool empty() { return m_ptr_positions.empty(); }
     friend Client;
 private:
