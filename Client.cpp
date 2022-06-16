@@ -8,8 +8,8 @@ bool Balance::waste_money(double money) {
     return false;
 }
 
-bool Client::pay_and_receive_order(Order & order){
-    if (order.get_cost() > m_balance.get_money()){
+bool Client::pay_and_receive_order(Order & order){ // empty
+    if (m_balance.waste_money(order.get_cost())){
         std::cout << "Not enough money to pay for order!" << std::endl;
         return false;
     }
