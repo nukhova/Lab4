@@ -12,7 +12,7 @@ public:
     }
 
     WeightProduct get_product_weight_price(std::string name) {
-        return m_products_weight_price.at(name);
+        return m_products_weight_price.at(name); // at кидает исключение, если товара с таким названием нет
     }
     AmmountProduct get_product_ammount_price(std::string name) {
         return m_products_ammount_price.at(name);
